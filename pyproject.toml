@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "measure-tiktok"
+version = "0.1.0"
+description = "Collect TikTok CDN metadata and measure video and live-stream fallback"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "psycopg2-binary==2.9.9",
+    "python-dotenv==1.0.1",
+    "requests==2.32.3",
+    "selenium==4.29.0",
+    "yt-dlp==2025.2.19",
+    "dnspython==2.7.0",
+    "pyshark==0.6",
+    "pytz>=2024.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff==0.17.1", "build>=1.2,<2"]
+
+[project.scripts]
+measure-tiktok = "measure_tiktok.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"measure_tiktok.data" = ["*.json"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

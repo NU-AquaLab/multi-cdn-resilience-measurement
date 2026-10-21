@@ -1,0 +1,42 @@
+# Credentials and browser sessions
+.env
+.env.*
+!.env.example
+!.env.vpn.example
+*.pkl
+*.pickle
+*cookies*.txt
+*cookies*.json
+
+# Python environments, builds, and tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Measurements and captures
+results/
+data/
+!src/measure_tiktok/data/
+!src/measure_tiktok/data/*.py
+!src/measure_tiktok/data/*.json
+logs/
+*.log
+*.har
+*.pcap
+*.pcapng
+*.mp4
+*.webm
+*.dump
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,11 @@
+**
+!pyproject.toml
+!README.md
+!src/
+!src/measure_tiktok/
+!src/measure_tiktok/**
+**/__pycache__/
+**/*.pyc
+**/*.pkl
+**/*.pickle
+**/.env

@@ -1,0 +1,1 @@
+"""Fallback for TikTok measurements."""
